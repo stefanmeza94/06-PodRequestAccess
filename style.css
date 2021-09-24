@@ -7,6 +7,8 @@
   --secondary-blue: #5a668a;
   --lightest-blue: #c2cbe5;
 
+  --error-message: #FB3E3E;
+
 
   --ff-primary: 'Chivo', sans-serif;
 }
@@ -115,13 +117,21 @@ body {
 
 .wrapper_box_email .btn_access:hover {
   background-color: var(--hover);
+  cursor: pointer;
+}
+
+.error_message {
+  color: var(--error-message);
+  margin: 0;
+  font-size: 12px;
+  visibility: hidden;
 }
 
 .dots {
   display: none;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1191px) {
   .container {
     background: var(--dark-color);
     min-height: 100vh;
@@ -150,7 +160,7 @@ body {
   .wrapper {
     background-color: var(--dark-color);
     position: relative;
-    max-width: 85%;
+    max-width: 87%;
     text-align: left;
     display: flex;
     flex-direction: column;
@@ -158,11 +168,13 @@ body {
   }
 
   .wrapper h3 {
+    margin-top: 93px;
     font-size: 48px;
     line-height: 56px;
     font-weight: 300;
     color: var(--primary-green);
     margin-bottom: 31px;
+    max-width: 665px;
   }
 
   .wrapper p {
@@ -170,8 +182,9 @@ body {
     font-weight: 300;
     font-size: 18px;
     line-height: 28px;
+    margin-top: 0;
     margin-bottom: 40px;
-    max-width: 450px;
+    max-width: 445px;
   }
 
   .wrapper .wrapper_box_email {
@@ -181,7 +194,7 @@ body {
 
   .input_wrapper {
     position: relative;
-    margin-bottom: 64px;
+    margin-bottom: 25px;
   }
 
   .wrapper_box_email input {
@@ -224,10 +237,127 @@ body {
   }
 
   .wrapper_box_icon img {
-    width: 110px;
+    width: 90px;
   }
 
   .dots {
     display: block;
+  }
+}
+
+@media (min-width: 1192px) {
+  .container {
+    background: var(--dark-color);
+    min-height: 100vh;
+    position: relative;
+    padding: 0 165px;
+  }
+
+  .wrapper_all {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .tablet {
+    display: none;
+  }
+
+  .desktop {
+    display: block;
+    position: absolute;
+    top: 130px;
+    right: 0;
+  }
+
+  .header {
+    justify-content: flex-start;
+    padding: 102px 0 0 0;
+    margin-bottom: 103px;
+  } 
+
+  .wrapper {
+    background-color: var(--dark-color);
+    position: relative;
+    max-width: 68%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 152px;
+  }
+
+  .wrapper h3 {
+    margin-top: 88px;
+    font-size: 48px;
+    line-height: 56px;
+    font-weight: 300;
+    color: var(--primary-green);
+    margin-bottom: 24px;
+    max-width: 665px;
+  }
+
+  .wrapper p {
+    color: var(--primary-gray);
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 28px;
+    margin-top: 0;
+    margin-bottom: 40px;
+    max-width: 445px;
+  }
+
+  .wrapper .wrapper_box_email {
+    order: 3;
+    max-width: 427px;
+  }
+
+  .input_wrapper {
+    position: relative;
+    margin-bottom: 40px;
+  } 
+
+  .wrapper_box_email input {
+    width: 100%;
+    padding: 14px 32px;
+    border-radius: 28px;
+    outline: none;
+    border: none;
+    line-height: 28px;
+    font-size: 14px;
+    background-color: var(--primary-blue);
+    color: white;
+    margin-bottom: 16px;
+  }
+
+  .wrapper_box_email .btn_access {
+    position: absolute;
+    width: 162px;
+    right: 5px;
+    top: 5px;
+    outline: none;
+    border: none;
+    font-size: 14px;
+    line-height: 28px;
+    padding: 9px 27px;
+    border-radius: 28px;
+    background-color: var(--primary-green);
+    color: var(--dark-color);
+    font-weight: 700;
+  }
+
+  .wrapper .wrapper_box_icon {
+    order: 4;
+    max-width: 536px;
+    margin: 0;
+  } 
+
+  .wrapper_box_icon img {
+    width: 90px;
+  } 
+
+  .dots {
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 15%;
   }
 }
