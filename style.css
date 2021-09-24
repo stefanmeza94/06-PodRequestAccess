@@ -1,6 +1,6 @@
 :root {
   --dark-color: #121725;
-
+  --hover: #B3FFE2;
   --primary-green: #54E6AF;
   --primary-gray: #C2CBE5;
   --primary-blue: #2c344b;
@@ -27,6 +27,11 @@ body {
   padding: 0 24px;
 }
 
+.wrapper_all {
+  max-width: 375px;
+  margin: 0 auto;
+}
+
 .header {
   display: flex;
   justify-content: center;
@@ -36,6 +41,11 @@ body {
 
 .wrapper {
   text-align: center;
+}
+
+.tablet,
+.desktop {
+  display: none;
 }
 
 .wrapper h3 {
@@ -101,4 +111,123 @@ body {
   background-color: var(--primary-green);
   color: var(--dark-color);
   font-weight: 700;
+}
+
+.wrapper_box_email .btn_access:hover {
+  background-color: var(--hover);
+}
+
+.dots {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .container {
+    background: var(--dark-color);
+    min-height: 100vh;
+    position: relative;
+    padding: 0 39px;
+  }
+
+  .wrapper_all {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .tablet {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .header {
+    justify-content: flex-start;
+    padding: 50px 0 0 0;
+    margin-bottom: 152px;
+  }
+
+  .wrapper {
+    background-color: var(--dark-color);
+    position: relative;
+    max-width: 85%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 152px;
+  }
+
+  .wrapper h3 {
+    font-size: 48px;
+    line-height: 56px;
+    font-weight: 300;
+    color: var(--primary-green);
+    margin-bottom: 31px;
+  }
+
+  .wrapper p {
+    color: var(--primary-gray);
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 40px;
+    max-width: 450px;
+  }
+
+  .wrapper .wrapper_box_email {
+    order: 3;
+    max-width: 427px;
+  }
+
+  .input_wrapper {
+    position: relative;
+    margin-bottom: 64px;
+  }
+
+  .wrapper_box_email input {
+    width: 100%;
+    padding: 14px 32px;
+    border-radius: 28px;
+    outline: none;
+    border: none;
+    line-height: 28px;
+    font-size: 14px;
+    background-color: var(--primary-blue);
+    color: white;
+    margin-bottom: 16px;
+  }
+
+  .wrapper_box_email .btn_access {
+    position: absolute;
+    width: 162px;
+    right: 5px;
+    top: 5px;
+    outline: none;
+    border: none;
+    font-size: 14px;
+    line-height: 28px;
+    padding: 9px 27px;
+    border-radius: 28px;
+    background-color: var(--primary-green);
+    color: var(--dark-color);
+    font-weight: 700;
+  }
+
+  .wrapper_box_email .btn_access:hover {
+    background-color: var(--hover);
+  }
+
+  .wrapper .wrapper_box_icon {
+    order: 4;
+    max-width: 536px;
+    margin: 0;
+  }
+
+  .wrapper_box_icon img {
+    width: 110px;
+  }
+
+  .dots {
+    display: block;
+  }
 }
