@@ -210,7 +210,7 @@ body {
     margin-bottom: 16px;
   }
 
-  .wrapper_box_email .btn_access {
+  .wrapper_box_email .btn {
     position: absolute;
     width: 162px;
     right: 5px;
@@ -226,7 +226,7 @@ body {
     font-weight: 700;
   }
 
-  .wrapper_box_email .btn_access:hover {
+  .wrapper_box_email .btn:hover {
     background-color: var(--hover);
   }
 
