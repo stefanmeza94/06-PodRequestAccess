@@ -1,3 +1,4 @@
+const form = document.querySelector('.form');
 const btn = document.querySelector('.btn_access');
 const input = document.querySelector('.email_input');
 const error = document.querySelector('.error');
@@ -12,13 +13,14 @@ function showErrorMessage(message) {
   error.style.visibility = 'visible';
 }
 
-btn.addEventListener('click', function() {
+form.addEventListener('submit', function(e) {
+  e.preventDefault();
   if (input.value === '') {
     showErrorMessage('Oops! Please add your email!');
   } else if (!validateEmail(input.value)) {
     showErrorMessage('Oops! Please check your email!');
   }
-});
+})
 
 document.body.addEventListener('click', function(e) {
   if (e.target !== input && e.target !== btn) {
